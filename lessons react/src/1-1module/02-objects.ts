@@ -29,7 +29,7 @@ console.log(product);
 // product.test='test';-Error
 
 interface StudentType {
-  studentName: string;
+  readonly studentName: string;
   course: string;
   time: number;
   isFavourite: boolean;
@@ -48,5 +48,6 @@ const student2: StudentType = {
   isFavourite: true,
   avatar: "./image.jpg",
 };
+// student2.studentName = 'Tetyana';-Error-readonly-can't change
 console.log(student);
 console.log(student2);
